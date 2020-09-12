@@ -15,7 +15,8 @@ Analisar os documentos produzidos pelo Estado Americano sobre Defesa Nacional, a
 3. Função relatório para 1 ano que é especificado como parâmetro na função. O relatório devolve um Pandas DataFrame com a incidência de cada palavra em ordem decrescente, a sua porcentagem frente as outras palavras e uma WordCloud que já é salva automaticamente na pasta raiz discriminando o ano.
 
 ## A Desenvolver
-1. Aprimorar função de relatório anual que também trabalhe com bigramas e trigramas.
-2. Plotar a frequência numa linha do tempo.
+1. Fazer Lemmatização nas palavras
+2. Aprimorar função de relatório anual que também trabalhe com bigramas e trigramas.
+3. Plotar a frequência numa linha do tempo.
 
-![Test Image 1](https://github.com/garaujo94/cyber-analise/blob/master/wordcloud.png)
+![Test Image 1](https://github.com/garaujo94/cyber-analise/blob/master/worldAll1.png)
