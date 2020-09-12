@@ -18,3 +18,4 @@ Analisar os documentos produzidos pelo Estado Americano sobre Defesa Nacional, a
 1. Aprimorar função de relatório anual que também trabalhe com bigramas e trigramas.
 2. Plotar a frequência numa linha do tempo.
 
+![Test Image 1](worldcloud.png)
