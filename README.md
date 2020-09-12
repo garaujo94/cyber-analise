@@ -2,8 +2,8 @@
 
 ## Conteúdo
 * [Objetivo](#objetivo)
-* [Funções prontas]
-* [A desenvolver]
+* [Funções prontas](#funções-prontas)
+* [A desenvolver](#a-desenvolver)
 
 ## Objetivo
 
