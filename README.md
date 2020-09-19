@@ -13,10 +13,11 @@ Analisar os documentos produzidos pelo Estado Americano sobre Defesa Nacional, a
 1. Leitura de todos os documentos .pdf disponíveis.
 2. Análise de conjunto completo de todos os documentos, fazendo contagem de palavras, bigramas e trigramas, plotando essa frequência e suas WordClouds.
 3. Função relatório para 1 ano que é especificado como parâmetro na função. O relatório devolve um Pandas DataFrame com a incidência de cada palavra em ordem decrescente, a sua porcentagem frente as outras palavras e uma WordCloud que já é salva automaticamente na pasta raiz discriminando o ano.
+4. Fazer Lemmatização nas palavras
+5. Plotar a frequência numa linha do tempo.
 
 ## A Desenvolver
-1. Fazer Lemmatização nas palavras
-2. Aprimorar função de relatório anual que também trabalhe com bigramas e trigramas.
-3. Plotar a frequência numa linha do tempo.
+1. Aprimorar função de relatório anual que também trabalhe com bigramas e trigramas.
+2. Comparar a análise de outros temas estratégicos como assuntos nucleares, espaciais etc.
 
 ![Test Image 1](https://github.com/garaujo94/cyber-analise/blob/master/worldAll1.png)
