@@ -19,5 +19,3 @@ Analisar os documentos produzidos pelo Estado Americano sobre Defesa Nacional, a
 ## A Desenvolver
 1. Aprimorar função de relatório anual que também trabalhe com bigramas e trigramas.
 2. Comparar a análise de outros temas estratégicos como assuntos nucleares, espaciais etc.
-
-![Test Image 1](https://github.com/garaujo94/cyber-analise/blob/master/worldAll1.png)
