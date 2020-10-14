@@ -123,3 +123,27 @@ def analise_anos(df, tipo=1, gerar_wordcloud = 0):
         
     r["quantidade"] = pd.to_numeric(r["quantidade"], downcast="float")
     return r
+
+def faz_analise(df, tema = 'cyber'):
+    print(df.filter(like=tema, axis=0))
+    analise = df.filter(like=tema, axis=0).groupby('Group',).sum()
+    analise.reset_index(inplace = True)
+    analise['assunto'] = tema
+    
+    return analise
+
+def plota_analise(df, tipo=['porcentagem', 'quantidade'], graf=['barra', 'linha']):
+
+    sns.set_palette("Dark2_r")
+    sns.set_style("darkgrid")
+
+    plt.figure(figsize=(14,8))
+
+    if graf == 'barra':
+        ax = sns.barplot(data=df, x="Group", y=tipo,
+                     palette="Blues_d", hue = 'assunto')
+    else:
+        ax = sns.lineplot(data=df, x="Group", y=tipo, hue = 'assunto')
+    plt.title('Evolução de '+tipo+' por ano')
+    plt.savefig('evolucao_'+tipo+'_por_ano_barra.png')
+    plt.show()
