@@ -136,6 +136,7 @@ def plota_analise(df, tipo=['porcentagem', 'quantidade'], graf=['barra', 'linha'
 
     sns.set_palette("Dark2_r")
     sns.set_style("darkgrid")
+    sns.set(font_scale=1.3)  
 
     plt.figure(figsize=(14,8))
 
@@ -147,3 +148,15 @@ def plota_analise(df, tipo=['porcentagem', 'quantidade'], graf=['barra', 'linha'
     plt.title('Evolução de '+tipo+' por ano')
     plt.savefig('evolucao_'+tipo+'_por_ano_barra.png')
     plt.show()
+
+def faz_analise_multipla(df, assuntos):
+
+    analise = pd.DataFrame()
+
+    for assunto in assuntos:
+        parcial = faz_analise(df, assunto)
+        analise = analise.append(parcial)
+
+    analise.sort_values(['Group'], inplace=True)
+
+    return analise
