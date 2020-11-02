@@ -138,7 +138,7 @@ def plota_analise(df, tipo=['porcentagem', 'quantidade'], graf=['barra', 'linha'
     sns.set_style("darkgrid")
     sns.set(font_scale=1.3)  
 
-    plt.figure(figsize=(14,8))
+    plt.figure(figsize=(20,12))
 
     if graf == 'barra':
         ax = sns.barplot(data=df, x="Group", y=tipo,
