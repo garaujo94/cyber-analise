@@ -22,7 +22,7 @@ def ler_arquivo(arquivo): #Essa versão é a que está valendo
     return text
 
 
-def ler_todos_arquivos(local = 'textos'):
+def ler_todos_arquivos(local = 'data/textos'):
     
     textos = os.listdir(local)
     ano = []
@@ -30,7 +30,7 @@ def ler_todos_arquivos(local = 'textos'):
     
     for texto in textos:
         ano.append(texto[:4])
-        text.append(ler_arquivo('textos/'+texto))
+        text.append(ler_arquivo('data/textos/'+texto))
     
     df = pd.DataFrame(text, columns=['text'], index=ano)
     print(df.head())
@@ -59,7 +59,7 @@ def plota_frequencia_dict(most_common, salvar = 0):
     sns.barplot(x=list(most_common.values())[:30],y=list(most_common.keys())[:30])
     plt.title('30 palavras mais comuns')
     if salvar == 1:
-        plt.savefig('barra1.png')
+        plt.savefig('/output/plots/barra1.png')
     plt.show()
 
 def plota_wordcloud(dicionario, stop, salvar = 0):
@@ -67,7 +67,7 @@ def plota_wordcloud(dicionario, stop, salvar = 0):
     wc = WordCloud(max_words = 2000 , width = 1600 , height = 800 , stopwords = stop).fit_words(dicionario)
     plt.imshow(wc , interpolation = 'bilinear')
     if salvar == 1:
-        plt.savefig('worldAll1')
+        plt.savefig('/output/worldcloud/worldAll1')
     plt.show()
 
 def analise_anos(df, tipo=1, gerar_wordcloud = 0):
@@ -146,7 +146,7 @@ def plota_analise(df, tipo=['porcentagem', 'quantidade'], graf=['barra', 'linha'
     else:
         ax = sns.lineplot(data=df, x="Group", y=tipo, hue = 'assunto')
     plt.title('Evolução de '+tipo+' por ano')
-    plt.savefig('evolucao_'+tipo+'_por_ano_barra.png')
+    plt.savefig('/output/plots/evolucao_'+tipo+'_por_ano_barra.png')
     plt.show()
 
 def faz_analise_multipla(df, assuntos):
